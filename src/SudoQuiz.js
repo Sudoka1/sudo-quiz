@@ -1,6 +1,12 @@
 import React, { useState } from "react";
-import { Card, CardContent } from "@shadcn/ui/card";
-import { Button } from "@shadcn/ui/button";
+const Card = ({ children }) => <div className="border p-4">{children}</div>;
+const CardContent = ({ children }) => <div>{children}</div>;
+const Button = ({ children, onClick }) => (
+  <button className="p-2 bg-blue-500 text-white" onClick={onClick}>
+    {children}
+  </button>
+);
+
 
 // Вопросы теста
 const questions = [
