@@ -1,14 +1,24 @@
 import React, { useState } from "react";
-const Card = ({ children }) => <div className="border p-4">{children}</div>;
-const CardContent = ({ children }) => <div>{children}</div>;
-const Button = ({ children, onClick }) => (
-  <button className="p-2 bg-blue-500 text-white" onClick={onClick}>
-    {children}
-  </button>
+import { motion } from "framer-motion";
+import "./styles.css";
+
+const Card = ({ children }) => (
+  <div className="card-container">{children}</div>
 );
 
+const CardContent = ({ children }) => <div className="text-center">{children}</div>;
 
-// Вопросы теста
+const Button = ({ children, onClick }) => (
+  <motion.button
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    className="button"
+    onClick={onClick}
+  >
+    {children}
+  </motion.button>
+);
+
 const questions = [
   { question: "Сколько раундов в поединке по SUDO?", options: ["1", "2", "3", "4"], answer: "3" },
   { question: "Как называется одежда бойца SUDO?", options: ["Кимоно", "Ода", "Ги"], answer: "Ода" },
@@ -29,24 +39,32 @@ export default function SudoQuiz() {
   };
 
   return (
-    <Card className="max-w-xl mx-auto p-5 text-center">
-      <CardContent>
-        {showResult ? (
-          <div>
-            <h2>Ваш результат: {score} из {questions.length}</h2>
-            <Button onClick={() => { setCurrentQuestion(0); setScore(0); setShowResult(false); }}>Пройти тест снова</Button>
-          </div>
-        ) : (
-          <div>
-            <h2 className="text-xl font-bold">{questions[currentQuestion].question}</h2>
-            <div className="mt-4 space-y-2">
-              {questions[currentQuestion].options.map((option, index) => (
-                <Button key={index} className="w-full" onClick={() => handleAnswer(option)}>{option}</Button>
-              ))}
-            </div>
-          </div>
-        )}
-      </CardContent>
-    </Card>
+    <div className="quiz-container">
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
+        <Card>
+          <CardContent>
+            {showResult ? (
+              <div>
+                <h2 className="result-text">Ваш результат: {score} из {questions.length}</h2>
+                <Button onClick={() => { setCurrentQuestion(0); setScore(0); setShowResult(false); }}>
+                  Пройти тест снова
+                </Button>
+              </div>
+            ) : (
+              <div>
+                <h2 className="question-text">{questions[currentQuestion].question}</h2>
+                <div className="options-container">
+                  {questions[currentQuestion].options.map((option, index) => (
+                    <Button key={index} onClick={() => handleAnswer(option)}>
+                      {option}
+                    </Button>
+                  ))}
+                </div>
+              </div>
+            )}
+          </CardContent>
+        </Card>
+      </motion.div>
+    </div>
   );
 }
