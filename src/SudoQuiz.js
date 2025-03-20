@@ -22,8 +22,23 @@ const Button = ({ children, onClick }) => (
 const questions = [
   { question: "Сколько раундов в поединке по SUDO?", options: ["1", "2", "3", "4"], answer: "3" },
   { question: "Как называется одежда бойца SUDO?", options: ["Кимоно", "Ода", "Ги"], answer: "Ода" },
-  { question: "Где штаб-квартира SUDO?", options: ["Баку", "Падерборн", "Москва"], answer: "Падерборн" },
-  { question: "Основатель SUDO?", options: ["Брюс Ли", "Сабир Сулейман", "Грандмастер Рахим"], answer: "Сабир Сулейман" },
+ 
+
+  { question: "Was bedeutet SUDO in der Übersetzung?", 
+    options: ["Ein Kampfstil, der auf harten Schlägen und statischen Positionen basiert", "Kampf ähnlich den Eigenschaften des Wassers", "Eine alte Kampfkunstphilosophie, die im antiken Griechenland entstanden ist"], 
+    answer: "Kampf ähnlich den Eigenschaften des Wassers" },
+
+  { question: "Gründer von SUDO?", options: ["Brus Lee", "Chuck Norris", "Sabir Suleyman", "Jigoro Kano"], answer: "Sabir Suleyman" },
+
+  { question: "In welchem ​​Jahr wurde SUDO geboren?", options: ["1877", "1977", "2014", "2011"], answer: "2011" },
+
+  { question: "In welchem ​​Land wurde SUDO geboren?", options: ["Aserbaidschan", "Deutschland", "Japan", "USA"], answer: "Aserbaidschan" },
+  
+  { question: "Wo befindet sich der Hauptsitz von SUDO?", options: ["Dubai", "Paderborn", "Baku", "New York"], answer: "Paderborn" },
+
+  { question: "Wer ist Ehrenpräsident der World SUDO Federation?", options: ["Naruhito", "Barack Hussein Obama II", "Chuck Norris",], answer: "Chuck Norris" },
+
+  { question: "Wer ist der Präsident der World SUDO Federation?", options: ["Sabir Suleyman", "Antonio Bagueras", "Grandmaster Rahim", "Gary Stve"], answer: "Sabir Suleyman" },
 ];
 
 export default function SudoQuiz() {
