@@ -78,6 +78,23 @@ const questions = [
               "Leichte Berührungen mit dem Fuß,Schläge auf die Schultern,Kniestoß gegen den Oberschenkel."], 
               answer: "Schläge mit der Faust ins Gesicht,Schläge auf den Hinterkopf,Schläge auf die Genitalien." },
 
+  { question: "Welche Haltung gilt in SUDO als die effektivste im Kampf?", options: ["Otur", "Rahat-otur", "Rahat", "Hazir-ol"], answer: "Hazir-ol" },
+
+  { question: "Welche Kombination ist in SUDO nicht effektiv?", options: ["Tritt zum Körper", "Dreimal mit der Faust auf die Schulter schlagen und dann rückwärts laufen", "Fußfeger", "Bodenkontrolle"], 
+    answer: "Dreimal mit der Faust auf die Schulter schlagen und dann rückwärts laufen" },
+
+  { question: "In welchem ​​Jahr wurde SUDO geboren?", options: ["1877", "1977", "2014", "2011"], answer: "2011" },
+
+  { question: "In welchem ​​Jahr wurde SUDO geboren?", options: ["1877", "1977", "2014", "2011"], answer: "2011" },
+
+  { question: "In welchem ​​Jahr wurde SUDO geboren?", options: ["1877", "1977", "2014", "2011"], answer: "2011" },
+
+  { question: "In welchem ​​Jahr wurde SUDO geboren?", options: ["1877", "1977", "2014", "2011"], answer: "2011" },
+
+  { question: "In welchem ​​Jahr wurde SUDO geboren?", options: ["1877", "1977", "2014", "2011"], answer: "2011" },
+
+  { question: "In welchem ​​Jahr wurde SUDO geboren?", options: ["1877", "1977", "2014", "2011"], answer: "2011" },
+
   { question: "In welchem ​​Jahr wurde SUDO geboren?", options: ["1877", "1977", "2014", "2011"], answer: "2011" },
 ];
 
