@@ -9,7 +9,7 @@ function App() {
 
   const texts = {
     en: {
-      
+      header: "Welcome to the SUDO Quiz",
       button: "Check Answers",
       result: "Test Results",
       correct: "Correct Answer",
